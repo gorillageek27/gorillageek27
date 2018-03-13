@@ -1,12 +1,27 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main() {
-	char input;
+	int inventory[7]; //set up a 7-slot array
+	bool hasFive = false;
 
-	cout << "Press Y" << endl;
-	cin >> input;
-	while (input == 'y') {
-		cout << "<3" << endl;
-		system("pause");
+	cout << "enter item." << endl << endl;
+	for (int i = 0; i < 7; i++) {
+		//inventory[i] = 7; //set each slot to 7
+		cin >> inventory[i]; //set each slot to user input
 	}
+
+
+	cout << "YOUR INVENTORY ITEM WAS." << endl;
+	for (int i = 0; i < 7; i++)
+		if (inventory[i] == 5)
+			hasFive = true;
+
+	if (hasFive == true)
+		cout << "secret number!" << endl;
+	else
+		cout << "you suck" << endl;
+
+
+
 }
